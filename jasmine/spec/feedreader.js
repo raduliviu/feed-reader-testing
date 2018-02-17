@@ -42,11 +42,17 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        it('have names', function() {
+            allFeeds.forEach(function(entry) {
+                expect(entry.name).toBeDefined();
+                expect(entry.name.length).not.toBe(0);
+            })
+        });
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
-
+    //describe('The menu', function() {
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
@@ -58,6 +64,7 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+    //});
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
