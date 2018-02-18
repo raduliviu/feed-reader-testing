@@ -7,4 +7,3 @@ This project is part of Udacity's Frontend Nanodegree. It is about testing an RS
 ## How to run the project
 - clone the repo locally using `git clone https://github.com/raduliviu/feed-reader-testing.git `
 - open index.html
-- alternatively, you can check it out online at https://raduliviu.github.io/feed-reader-testing/
