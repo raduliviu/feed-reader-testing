@@ -35,7 +35,7 @@ $(function() {
             allFeeds.forEach(function(entry) {
                 expect(entry.url).toBeDefined();
                 expect(entry.url.length).not.toBe(0);
-            })
+            });
         });
 
         /* TODO: Write a test that loops through each feed
@@ -46,7 +46,7 @@ $(function() {
             allFeeds.forEach(function(entry) {
                 expect(entry.name).toBeDefined();
                 expect(entry.name.length).not.toBe(0);
-            })
+            });
         });
     });
 
@@ -112,8 +112,8 @@ $(function() {
                 firstFeed = document.querySelector('.feed').innerHTML;
                 loadFeed(1, function() {
                     done();
-                })
-            })
+                });
+            });
         });
 
         it('new feed content changes', function(done) {
