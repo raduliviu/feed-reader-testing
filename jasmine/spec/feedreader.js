@@ -102,6 +102,11 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
         let firstFeed;
+        /* I have declared firstFeed as an empty variable above and then
+         * assigned it a value in the beforeEach function. If I had only
+         * declared and assigned it beforeEach wholly, I would not have had
+         * access to it in the spec to test against.
+         */
         beforeEach(function(done) {
             loadFeed(0, function() {
                 firstFeed = document.querySelector('.feed').innerHTML;
