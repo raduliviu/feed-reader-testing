@@ -80,9 +80,8 @@ $(function() {
             });
           });
 
-        it('has at least a single .entry element in the .feed container', function(done) {
-            expect(document.querySelector('.feed .entry')).not.toBe(0);
-            done();
+        it('has at least a single .entry element in the .feed container', function() {
+            expect(document.querySelectorAll('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
@@ -105,9 +104,8 @@ $(function() {
             });
         });
 
-        it('new feed content changes', function(done) {
+        it('new feed content changes', function() {
             expect(document.querySelector('.feed').innerHTML).not.toBe(firstFeed);
-            done();
         });
     });
 }());
