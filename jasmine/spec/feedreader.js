@@ -54,7 +54,7 @@ $(function() {
         /* This test ensures the menu element is hidden by default.
          */
         it('is hidden by default', function() {
-            expect(document.body.className).toContain('menu-hidden');
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
         });
 
          /* This test ensures the menu changes visibility when the
@@ -63,9 +63,9 @@ $(function() {
           */
          it('shows and hides when clicked', function() {
             document.querySelector(".menu-icon-link").click();
-            expect(document.body.className).not.toContain('menu-hidden');
+            expect(document.body.classList.contains('menu-hidden')).toBe(false);
             document.querySelector(".menu-icon-link").click();
-            expect(document.body.className).toContain('menu-hidden');
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
          });
     });
 
@@ -81,7 +81,7 @@ $(function() {
           });
 
         it('has at least a single .entry element in the .feed container', function(done) {
-            expect(document.getElementsByClassName('entry')).not.toBe(0);
+            expect(document.querySelector('.feed .entry')).not.toBe(0);
             done();
         });
     });
